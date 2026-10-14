@@ -1,9 +1,9 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import GameScreen from './GameScreen';
-import MyTeamScreen from './MyTeamScreen';
-import PokedexScreen from './PokedexScreen';
+import GameScreen from '../screens/GameScreen';
+import MyTeamScreen from '../screens/MyTeamScreen';
+import PokedexScreen from '../screens/PokedexScreen';
 import { List, UserRoundGroup, Gamepad2 } from 'lucide-react-native'
 
 const Tab = createBottomTabNavigator();
@@ -18,7 +18,7 @@ export default function nav(){
                     tabBarIcon: ({color,size})=> <UserRoundGroup color={color} size={size} />
                 }}/>
                 <Tab.Screen name="Game" component={GameScreen} options={{
-                    tabBarIcon: ({color,size})=> <Game color={color} size={size} />
+                    tabBarIcon: ({color,size})=> <Gamepad2 color={color} size={size} />
                 }}/>
             </Tab.Navigator>
         </NavigationContainer>
