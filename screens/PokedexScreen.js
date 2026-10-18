@@ -11,7 +11,7 @@ export default function PokedexScreen() {
   const [isLoading, setLoading] = useState(true);
   const [isFetchingMore, setFetchingMore] = useState(false)
   const [data, setData] = useState([]);
-  const [offset, setOffSet] = useState(0)
+  const [offset, setOffSet] = useState(17)
   const LIMIT = 20;
 
   const [searchText, setSearchText] = useState('')
