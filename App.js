@@ -1,12 +1,18 @@
+
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+
 import Nav from './components/Nav.js';
+import { TeamProvider } from './context/TeamContext';
+
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Nav/>
-      <StatusBar style="auto" />
-    </View>
+    <TeamProvider>
+      <View style={styles.container}>
+        <Nav />
+        <StatusBar style="auto" />
+      </View>
+    </TeamProvider>
   );
 }
 
@@ -14,7 +20,5 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#ffffff',
-    // alignItems: 'center',
-    // justifyContent: 'center',
   },
 });
